@@ -67,6 +67,20 @@ if (message.content === '!spam') {
       }
 });
 
+client.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
+if (message.content === '!spam') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 90000; x++) {
+        message.channel.send(`**!spam **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
 client2.on('message', message => { // لا تغير شئ عشان ما تخرب الدنيا
 if (message.content === '!spam') {
       let count = 0;
